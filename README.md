@@ -1,14 +1,20 @@
-# qtc
+## qtc
 Open-Source Quantum Topological Computer you can build at home.
 
 The goal is to stream pairs of entagled electrons, with 48 modifiable properties each ( -4 to +4 OAM and 0 to 5 concentric rings, radial degrees of freedom ) , where we hijack t]he entire state matrix as a manifold and encode our data directly in the relationship of the entagled photons. We use the state probabilities of both entagled photons for a 48x48 matrix or 2034 bit payload, using the amplitude for each as the actual real numbered values.
 
 Much of this works stems directly from [Revealing the topological nature of entangled orbital angular momentum states of light](https://doi.org/10.1038/s41467-025-66066-3)
 
-## Milestone 1
+## The Jist
+
+We aim a single longitudinal mode (SLM) diode pumped solid state (DPSS) laser at our beta barium borate non-linear crystal (BBO) to create lots of pairs of entagled photons. They leave the BBO and enter our Spatial Light Modulator (SLM), guided through the crystal with our 30 AWG micro heated walls where we can tune the path by nanometers.
+
+In our SLM
+
+### Milestone 1
 
 
-## Parts List
+### Parts List
 
 | Component Description | Suggested Supplier | Part Number Example | Qty | Engineering Notes |
 | :--- | :--- | :--- | :--- | :--- |
@@ -25,3 +31,4 @@ Much of this works stems directly from [Revealing the topological nature of enta
 | Variable Aperture / Iris Diaphragm | Thorlabs | SM1D12 | 1 | Placed directly before the APD to physically slice away light scattered by the carrier gratings. |
 | Machinist's Granite Surface Plate (18" x 24" x 4") | Starrett | Starrett 81803 | 1 | Laboratory Grade AA plate. Floated on dry sand inside a heavy tub to deaden earth vibrations. |
 | Rigid Polyisocyanurate Insulation Panels (1" Foil-Lined) | Home Depot / Lowe's | Generic R-Max / AP | 3 | To build the primary thermal shield enclosure. Target stability inside is 71.6°F (22°C) +/-0.1°C. |
+| Entanglement Upgrades,Beta Barium Borate (BBO) Crystal Type-II SPDC (Cut for 532nm -> 1064nm) | Thorlabs OR Newlight Photonics | BBO5050-P (Custom Cut) | 1 |CRITICAL FOR MILESTONE 2. Splitting a high-coherence pump photon into a 3D spatially entangled twin pair |
