@@ -1,4 +1,4 @@
-## qtc
+# qtc
 Open-Source Quantum Topological Computer you can build at home.
 
 The goal is to stream pairs of entagled electrons, with 48 modifiable properties each ( -4 to +4 orbital angular momentum (OAM) and 0 to 5 concentric rings, radial degrees of freedom ) , where we hijack t]he entire state matrix as a manifold and encode our data directly in the relationship of the entagled photons. We use the state probabilities of both entagled photons for a 48x48 matrix or 2034 sized payload, using the amplitude for each as the actual real numbered values.
@@ -7,7 +7,7 @@ Much of this works stems directly from [Revealing the topological nature of enta
 
 ## The Workflow
 
-We aim a single longitudinal mode diode-pumped solid-state (SLM DPSS) long-coherence laser at our beta barium borate (BBO) non-linear crystal. Through a process called Spontaneous Parametric Down-Conversion (SPDC), the crystal occasionally (1 in 1billion) splits a single high-energy photon into a pair of lower-energy 'daughter' photons. Because this decay must strictly obey the laws of conservation of energy and momentum, the resulting photon pairs are intrinsically entangled in their polarization, momentum, and times of creation ( [Go to Entanglement Section](###how_we_create_entaglement)  ). They leave the BBO and enter our Spatial Light Modulator (SLM), guided through the crystal with our 30 AWG micro heated wires where we can tune the path by nanometers by slightly altering the temperature of the crystal. 
+We aim a single longitudinal mode diode-pumped solid-state (SLM DPSS) long-coherence laser at our beta barium borate (BBO) non-linear crystal. Through a process called Spontaneous Parametric Down-Conversion (SPDC), the crystal occasionally (1 in 1billion) splits a single high-energy photon into a pair of lower-energy 'daughter' photons. Because this decay must strictly obey the laws of conservation of energy and momentum, the resulting photon pairs are intrinsically entangled in their polarization, momentum, and times of creation ( [Go to Entanglement Section](#how_we_create_entaglement)  ). They leave the BBO and enter our Spatial Light Modulator (SLM), guided through the crystal with our 30 AWG micro heated wires where we can tune the path by nanometers by slightly altering the temperature of the crystal. 
 
 We have two SLM's, one for photon A and one for photon B. Our SLM's are what alter the wavefront's PHASE ( by delaying it ) and OAM
 
@@ -34,7 +34,7 @@ We have two SLM's, one for photon A and one for photon B. Our SLM's are what alt
 | Entanglement Upgrades,Beta Barium Borate (BBO) Crystal Type-II SPDC (Cut for 532nm -> 1064nm) | Thorlabs OR Newlight Photonics | BBO5050-P (Custom Cut) | 1 |CRITICAL FOR MILESTONE 2. Splitting a high-coherence pump photon into a 3D spatially entangled twin pair |
 
 
-## Details And References 
+## Further Reading and Reference Materials
 
 ### how_we_create_entaglement
 
