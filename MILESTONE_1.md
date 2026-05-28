@@ -4,6 +4,7 @@ Welcome to the core documentation repository for the Homegrown Photonic Topology
 
 By utilizing an integer alphabet range up to $l = \pm24$, we unlock a 48-dimensional configuration space per optical path.
 
+*charlie: We shine a laser through tiny screen with a masked image that twists the light -24 to +24 
 ---
 
 ## Milestone 1: Classical Validation Sandbox
