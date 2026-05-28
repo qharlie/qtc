@@ -23,25 +23,8 @@ The high-dimensional topological knot structures are no longer written into phys
 To execute Milestone 2, the kinematic loopback mirrors (Mirrors 2 and 3) from Milestone 1 are removed from the workbench. The previously provisioned "Quantum Insertion Runway" is populated, creating an un-intersected, parallel dual-rail processing topology.
 
 #### Optical Bench Component Layout (Milestone 2 Quantum Mode)
-+-------------------------------------------------------------------------+
-|                                                                         |
-|   [405nm Laser] ---> [Iris 1] ---> [ BBO Crystal ]                      |
-|                                           |                             |
-|                                           +--> (Photon A: V-Pol) --+    |
-|                                           |                        |    |
-|                                           +--> (Photon B: H-Pol) -+|    |
-|                                                                   v|    |
-|                                                          [M1 Mirror 1 Mode]
-|                                                                   ||    |
-|                                                                   vv    |
-|                                                            [ PBS Cube ] |
-|                                                             |        |  |
-|                                                             v        v  |
-|                                                      [SLM Z1]   [SLM Z2]|
-|                                                         |        |      |
-|   [Coincidence Logic] <-- [Dual APDs] <-- [810nm Filter] <-- [BS Cube]  |
-|                                                                         |
-+-------------------------------------------------------------------------+
+
+![Layout Image](layout_m2.jpg)
 #### Step-by-Step Quantum Realignment Protocol
 
 1. **Populating the Runway:**
