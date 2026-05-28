@@ -1,9 +1,8 @@
-# qtpc
-Open-Source Quantum Topologically Protected Computer 
+# qtpc - Open-Source Quantum Topologically Protected Computer 
 
-With the breakthrough in this paper [Revealing the topological nature of entangled orbital angular momentum states of light](https://doi.org/10.1038/s41467-025-66066-3) , we now only need to alter the phase of the wavefront to create 48 distinct orthogonal channels. These channels are simply the number of phase twists (oribtal angular momentum) per wavelength, and in traditional optics we can stack them all on top of eachother and they won't interfere. The topological protection comes from these whole integer twists ( l=-24 to +24 ) , the light can be slightly distorted but the knot (all the twists stacked on top of one another) is very hard to untie, and 4 twists will never physically interact with 5 twists making them stackable - making the whole setup more stable and suitable for manipulating. 
+Our topological protection stems from these whole integer twists ( l=-24 to +24 ). Our light can be slightly distorted but the knot ( these twists stacked on top of one another all at the same time) is very hard to untie and each channel is distinct aka orthogonal ( 6 twists per $\lambda$  will never interfere with 5 twists per $\lambda$ making information bleed a non issue )
 
-The Quantum part of our QTPC we achieve by using entagled photons. If they were not entangled, two photons would have 96 slots (48+48) . But with entanglement, _<ins>we hijack the entire probability state matrix</ins>_ for 48x48 or 2304 channels. 
+The Quantum part of our QTPC we achieve by using entagled photons. If they were not entangled, two photons would have 96 channels (48+48) . But with entanglement, _<ins>we hijack the entire probability state matrix</ins>_ for 48x48 or 2304 channels. 
 
 Let's reduce our channels to just 4, *l=-2* to *l=+2* , (meaning physically: two twists to the left through two twists to the right giving us 4 channels for data). Right at the moment of creation, the probability state matrix is  perfectly anti-correlated and looks like this: 
 
