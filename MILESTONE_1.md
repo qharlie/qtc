@@ -45,7 +45,7 @@ The physical footprint on the granite optical workbench has been precisely engin
    |                                                                         |
    +-------------------------------------------------------------------------+
 ```
-
+![Layout Image](layout.jpg)
 #### Step-by-Step Physical Alignment Guide
 
 1.  **Launch & Beam Conditioning (The Runway):**
