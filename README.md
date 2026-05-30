@@ -8,11 +8,11 @@ We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow
 
 Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
 
-The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we utilize the high-dimensional state space (the density matrix) of the biphoton system, scaling our potential state space to $48 \times 48 = 2304$ joint channels. 
+The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we *hijack the potential state space* to $48 \times 48 = 2304$ joint channels. 
 
-To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Right at the moment of creation via Spontaneous Parametric Down-Conversion (SPDC), the photons exhibit strict OAM conservation ($l_A + l_B = 0$). This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a $100\% / 4 = 25\%$ chance for each correlated state:
+To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Directly afterthe moment of creation in our [BBO Crstal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), the photons are strictly anti-correlated. This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a $100\% / 4 = 25\%$ chance for each correlated state:
 
-*(where $l_A$ is the twist count for photon A and $l_B$ is the twist count for photon B)*
+(where $l_A$ is the twist count for photon A and $l_B$ is the twist count for photon B)
 
 | PHOTON A (Zone 1) \ PHOTON B (Zone 2) | $l=-2$ | $l=-1$ | $l=+1$ | $l=+2$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -21,7 +21,7 @@ To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Right at
 | **$l=+1$** | 0 | 0.25 | 0 | 0 | If $l_A = +1$, $l_B$ must be $-1$ |
 | **$l=+2$** | 0.25 | 0 | 0 | 0 | If $l_A = +2$, $l_B$ must be $-2$ |
 
-Directly after the entangled photons leave the [BBO crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), we alter their wavefronts using a Spatial Light Modulator ([SLM](https://holoeye.com/product/leto-3-vis-009/)). By applying computed phase masks to the SLM, we manipulate the spatial superposition of the photon states. This shifts the joint probabilities measured at our detector array to look something like this:
+In the first step in the pipeline after creation we alter their wavefronts using a Spatial Light Modulator ([SLM](https://holoeye.com/product/leto-3-vis-009/)). By applying computed phase masks to the SLM, we manipulate the spatial superposition of the photon states. This shifts the joint probabilities measured at our detector array to look something like this:
 
 | PHOTON A (Zone 1) \ PHOTON B (Zone 2) | $l=-2$ | $l=-1$ | $l=+1$ | $l=+2$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
