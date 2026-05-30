@@ -1,48 +1,49 @@
-# qtpc - Open-Source Quantum Topologically Protected Computer 
+# qtpc - Open-Source High-Dimensional Quantum Optical Computer 
 
 ![oam](oam__.png)
 
+We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of orbital angular momentum (OAM) phase twists per wavelength ($\lambda$). Twisting it to the left we use negative integers ($l=-24$) and to the right we go positive ($l=+24$). Each of these represents a distinct, orthogonal spatial channel where data can be encoded using amplitude (brightness, scaled 1–64).
 
-We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of twist per wavelength ($\lambda$ for short). Twisting it to the left we use (l=-24) negative numbers and to the right we go positive (l=24). Each of these are distinct channels we can put numbered values in (1-64 signaled with amplitude aka *brightness* ).
 
-Our topological protection namesake stems from these whole integer twists ( l=-24 to +24 ). Our light can be slightly distorted (by dust etc) but the knot ( these twists stacked on top of one another all at the same time) is very hard to untie and each channel is orthogonal ( 6 twists per $\lambda$  will never interfere with 5 twists per $\lambda$ keeping our channels clean ). For this project we'll be using 48 total channels, -24 to +24.
 
-The Quantum part of our QTPC we achieve by using entagled photons. If they were not entangled, our two photons would have 96 channels (48+48) . But with entanglement, _<ins>we hijack the entire probability state matrix</ins>_ for 48x48 or 2304 channels. 
+Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each OAM channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
 
-To illustrate what we're doing let's reduce our channels to just 4, *l=-2* to *l=+2* , (meaning physically: two twists to the left through two twists to the right giving us 4 channels for data). Right at the moment of creation, the probability state matrix is perfectly anti-correlated , meaning if photon A has two twists two the left, then photon B will have two twists to the right, and theres a 100/4=25% chance for each of our states, and looks like this: 
+The quantum power of QTPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we utilize the high-dimensional state space (the density matrix) of the biphoton system, scaling our potential state space to $48 \times 48 = 2304$ joint channels. 
 
-( _Al_ is the twist count for photon A )
-| PHOTON A (Zone 1) \ PHOTON B (Zone 2) | l=-2 | l=-1 | l=+1 | l=+2 | Notes |
+To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Right at the moment of creation via Spontaneous Parametric Down-Conversion (SPDC), the photons exhibit strict OAM conservation ($l_A + l_B = 0$). This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a $100\% / 4 = 25\%$ chance for each correlated state:
+
+*(where $l_A$ is the twist count for photon A and $l_B$ is the twist count for photon B)*
+
+| PHOTON A (Zone 1) \ PHOTON B (Zone 2) | $l=-2$ | $l=-1$ | $l=+1$ | $l=+2$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **l=-2** | 0 | 0 | 0 | 0.25 | If _Al_ is -2, _Bl_ must be +2 |
-| **l=-1** | 0 | 0 | 0.25 | 0 | If _Al_ is -1, _Bl_ must be +1 |
-| **l=+1** | 0 | 0.25 | 0 | 0 | If _Al_ is +1, _Bl_ must be -1 |
-| **l=+2** | 0.25 | 0 | 0 | 0 | If _Al_ is +2, _Bl_ must be -2 |
+| **$l=-2$** | 0 | 0 | 0 | 0.25 | If $l_A = -2$, $l_B$ must be $+2$ |
+| **$l=-1$** | 0 | 0 | 0.25 | 0 | If $l_A = -1$, $l_B$ must be $+1$ |
+| **$l=+1$** | 0 | 0.25 | 0 | 0 | If $l_A = +1$, $l_B$ must be $-1$ |
+| **$l=+2$** | 0.25 | 0 | 0 | 0 | If $l_A = +2$, $l_B$ must be $-2$ |
 
-Directly after the entagled photon leaves the [BBO crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators) we alter it's wavefront with our [SLM](https://holoeye.com/product/leto-3-vis-009/), where we manipulate <b>*the superposition*</b> of the two photons in such a way that the probabilites of the photons hitting our end sensor array might look like this:
+Directly after the entangled photons leave the [BBO crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), we alter their wavefronts using a Spatial Light Modulator ([SLM](https://holoeye.com/product/leto-3-vis-009/)). By applying computed phase masks to the SLM, we manipulate the spatial superposition of the photon states. This shifts the joint probabilities measured at our detector array to look something like this:
 
-| PHOTON A (Zone 1) \ PHOTON B (Zone 2) | l=-2 | l=-1 | l=+1 | l=+2 | Notes |
+| PHOTON A (Zone 1) \ PHOTON B (Zone 2) | $l=-2$ | $l=-1$ | $l=+1$ | $l=+2$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **l=-2** | 0.0 | 0.65 | 0.0 | 0.35 | Encoded Data Row 1 |
-| **l=-1** | 0.60 | 0.0 | 0.40 | 0.0 | Encoded Data Row 2 |
-| **l=+1** | 0.0 | 0.25 | 0.0 | 0.75 | Encoded Data Row 3 |
-| **l=+2** | 0.30 | 0.0 | 0.0 | 0.70 | Encoded Data Row 4 |
+| **$l=-2$** | 0.0 | 0.65 | 0.0 | 0.35 | Encoded Data Row 1 |
+| **$l=-1$** | 0.60 | 0.0 | 0.40 | 0.0 | Encoded Data Row 2 |
+| **$l=+1$** | 0.0 | 0.25 | 0.0 | 0.75 | Encoded Data Row 3 |
+| **$l=+2$** | 0.30 | 0.0 | 0.0 | 0.70 | Encoded Data Row 4 |
 
-The end-result table is made up over 10k clicks per row of _where the photon arrived on our [sensors](https://www.thorlabs.com/free-space-si-avalanche-photodetectors)_.  The numbers .65 and .35 above are 6500 and 3500 clicks registered over a 10,000 click period per row. Those clicks are what we created by altering the superposition of photons A and B with our SLM by passing the photons through masks we create, like the ones below
+This end-result matrix is reconstructed by counting single-photon coincidence arrivals across our [sensor array](https://www.thorlabs.com/free-space-si-avalanche-photodetectors). The numbers `0.65` and `0.35` above correspond to 6,500 and 3,500 coincidence clicks registered over a 10,000-click sampling window. We control these statistical distributions by passing the photons through computer-generated holograms on our SLM, like the masks below:
 
 ![slm_image](mask.png)
 
-## And here come the juice
+## The Computational Advantage
 
-In traditional optics, you can combine two lightwaves and read the interference and destruction of their waves as a *tensor product*. 
+In classical optics, combining and interfering light waves maps directly to linear algebraic transformations. 
 
-In our quantum computer, *the entire probability state matrix cross multiplies at the speed of light*. We get 48x48=2304 cross-multipled values we can read from our 2d sensor array terminal. With the our prototype spec materials we can get up to 1.3Ghz or 1.3 billiom matrix multiplications per second. 
+By scaling this to a high-dimensional quantum system, passing the entangled photons through engineered SLM phases allows the system to perform complex spatial transformations across all 2,304 joint state values simultaneously. With a high-repetition-rate pump laser and fast coincidence counters, we aim to demonstrate massive parallel processing capabilities approaching GHz-scale effective state transformations.
 
-# Is this real though ?
+# Is this real though?
 
-Can we really [alter](https://holoeye.com/product/leto-3-vis-009/) the super position of two [entagled photons](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators) to slyly shove data into where they are statistically likely to appear, and finally [combine them](https://www.thorlabs.com/non-polarizing-cube-beamsplitters-700---1100-nm?aID=13c106582ed9606ef3f9ea11e60cd787&aC=1&aE=1&aN=1&tabName=Overview) back in mid air and [unroll the waves](https://www.thorlabs.com/n-bk7-plano-convex-lenses-ar-coating-650---1050-nm) and [read our matrix multiplication results](https://www.thorlabs.com/free-space-si-avalanche-photodetectors) ?
+Can we really alter the spatial superposition of two entangled photons to deliberately program their joint probability distributions, recombine them, sort their OAM modes, and read out the resulting matrix transformations?
 
 # Join me and we will find out together!
 ### [Milestone 1](MILESTONE_1.md) <-- currently here
 ### [Milestone 2](MILESTONE_2.md)
-
