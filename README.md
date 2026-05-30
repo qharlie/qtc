@@ -2,15 +2,15 @@
 
 ![oam](oam__.png)
 
-We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of phase twists per wavelength ($\lambda$). Twisting it to the left we use negative integers ($l=-24$) and to the right we go positive ($l=+24$). Each of these represents a distinct, orthogonal spatial channel where data can be encoded using amplitude (brightness, scaled 1–64).
+We [alter](https://holoeye.com/product/leto-3-vis-009/) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of phase twists per wavelength ($\lambda$). Twisting it to the left we use negative integers ($l=-24$) and to the right we go positive ($l=+24$). Each of these represents a distinct, orthogonal spatial channel where data can be encoded using amplitude (brightness, scaled 1–64).
 
 
 
-Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
+Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes on top of each other while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
 
-The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we *hijack the potential state space* to $48 \times 48 = 2304$ joint channels. 
+The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we *hijack the entire state space* to $48 \times 48 = 2304$ joint channels. 
 
-To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Directly afterthe moment of creation in our [BBO Crstal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), the photons are strictly anti-correlated. This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a $100\% / 4 = 25\%$ chance for each correlated state:
+To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Directly afterthe moment of creation in our [BBO Crstal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), the photons are strictly anti-correlated. This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a 100 / 4 states = 25% chance for each correlated state:
 
 (where $l_A$ is the twist count for photon A and $l_B$ is the twist count for photon B)
 
@@ -42,7 +42,7 @@ By scaling this to a high-dimensional quantum system, passing the entangled phot
 
 # Is this real though?
 
-Can we really alter the spatial superposition of two entangled photons to deliberately program their joint probability distributions, recombine them, sort their OAM modes, and read out the resulting matrix transformations?
+Can we really alter the spatial superposition of two entangled photons to deliberately program their joint probability distributions, recombine them, sort their twists, and read out the resulting matrix transformations?
 
 # Join me and we will find out together!
 ### [Milestone 1](MILESTONE_1.md) <-- currently here
