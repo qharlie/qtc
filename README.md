@@ -2,11 +2,11 @@
 
 ![oam](oam__.png)
 
-We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of orbital angular momentum (OAM) phase twists per wavelength ($\lambda$). Twisting it to the left we use negative integers ($l=-24$) and to the right we go positive ($l=+24$). Each of these represents a distinct, orthogonal spatial channel where data can be encoded using amplitude (brightness, scaled 1–64).
+We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of phase twists per wavelength ($\lambda$). Twisting it to the left we use negative integers ($l=-24$) and to the right we go positive ($l=+24$). Each of these represents a distinct, orthogonal spatial channel where data can be encoded using amplitude (brightness, scaled 1–64).
 
 
 
-Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each OAM channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
+Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
 
 The quantum power of QTPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we utilize the high-dimensional state space (the density matrix) of the biphoton system, scaling our potential state space to $48 \times 48 = 2304$ joint channels. 
 
