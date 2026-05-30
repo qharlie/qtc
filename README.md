@@ -1,7 +1,11 @@
 # qtpc - Open-Source Quantum Topologically Protected Computer 
-With our [Spatial Light Modulator](https://holoeye.com/product/leto-3-vis-009/) we can alter the phase of our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of twist per wavelength (from now on just $\lambda$) . Twisting it to the left we go negative and to the right we go positive (0 is our baseline).
 
-Our topological protection stems from these whole integer twists ( l=-24 to +24 ). Our light can be slightly distorted (by dust etc) but the knot ( these twists stacked on top of one another all at the same time) is very hard to untie and each channel is distinct aka orthogonal ( 6 twists per $\lambda$  will never interfere with 5 twists per $\lambda$ keeping our channels clean ). For this project we'll be using 48 total channels, -24 to +24.
+![oam](oam__.png)
+
+
+We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow-linewidth-lasers/08-01-series/) to twist it into whole numbers of twist per wavelength ($\lambda$ for short). Twisting it to the left we use (l=-24) negative numbers and to the right we go positive (l=24). Each of these are distinct channels we can put numbered values in (1-64 signaled with amplitude aka *brightness* ).
+
+Our topological protection namesake stems from these whole integer twists ( l=-24 to +24 ). Our light can be slightly distorted (by dust etc) but the knot ( these twists stacked on top of one another all at the same time) is very hard to untie and each channel is orthogonal ( 6 twists per $\lambda$  will never interfere with 5 twists per $\lambda$ keeping our channels clean ). For this project we'll be using 48 total channels, -24 to +24.
 
 The Quantum part of our QTPC we achieve by using entagled photons. If they were not entangled, our two photons would have 96 channels (48+48) . But with entanglement, _<ins>we hijack the entire probability state matrix</ins>_ for 48x48 or 2304 channels. 
 
