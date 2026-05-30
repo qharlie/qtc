@@ -19,7 +19,7 @@ To illustrate what we're doing let's reduce our channels to just 4, *l=-2* to *l
 | **l=+1** | 0 | 0.25 | 0 | 0 | If _Al_ is +1, _Bl_ must be -1 |
 | **l=+2** | 0.25 | 0 | 0 | 0 | If _Al_ is +2, _Bl_ must be -2 |
 
-Directly after the entagled photon leaves the [BBO crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators) we alter it's wavefront with our [SLM](https://holoeye.com/product/leto-3-vis-009/), where we manipulate <b>*the superposition*</b> of the two photons in such a way that the probabilites of the photons hitting our end sensor array looks like this:
+Directly after the entagled photon leaves the [BBO crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators) we alter it's wavefront with our [SLM](https://holoeye.com/product/leto-3-vis-009/), where we manipulate <b>*the superposition*</b> of the two photons in such a way that the probabilites of the photons hitting our end sensor array might look like this:
 
 | PHOTON A (Zone 1) \ PHOTON B (Zone 2) | l=-2 | l=-1 | l=+1 | l=+2 | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
