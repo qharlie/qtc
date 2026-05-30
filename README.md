@@ -8,7 +8,7 @@ We [alter](#SLM) our [light](https://hubner-photonics.com/products/lasers/narrow
 
 Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for high-dimensional multiplexing. Because each channel is mathematically orthogonal (e.g., $l=6$ will not inherently interfere with $l=5$), we can stack these modes simultaneously while keeping our channels clean. For this project, we'll be using 48 total channels, spanning from $l=-24$ to $+24$.
 
-The quantum power of QTPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we utilize the high-dimensional state space (the density matrix) of the biphoton system, scaling our potential state space to $48 \times 48 = 2304$ joint channels. 
+The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we utilize the high-dimensional state space (the density matrix) of the biphoton system, scaling our potential state space to $48 \times 48 = 2304$ joint channels. 
 
 To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Right at the moment of creation via Spontaneous Parametric Down-Conversion (SPDC), the photons exhibit strict OAM conservation ($l_A + l_B = 0$). This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a $100\% / 4 = 25\%$ chance for each correlated state:
 
