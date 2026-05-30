@@ -44,6 +44,9 @@ By scaling this to a high-dimensional quantum system, passing the entangled phot
 
 Can we really alter the spatial superposition of two entangled photons to deliberately program their joint probability distributions, recombine them, sort their twists, and read out the resulting matrix transformations?
 
-# Join me and we will find out together!
+Join me and we will find out together!
+
 ### [Milestone 1](MILESTONE_1.md) <-- currently here
 ### [Milestone 2](MILESTONE_2.md)
+
+I might also [go another direction](README_QTPC.md) with this.
