@@ -10,7 +10,7 @@ Our architecture utilizes these discrete integer twists ($l=-24$ to $+24$) for h
 
 The quantum power of QPC is achieved by using entangled photon pairs. In a classical system, two independent light beams would give us 96 channels ($48 + 48$). But by leveraging quantum entanglement, we *hijack the entire state space* to $48 \times 48 = 2304$ joint channels. 
 
-To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Directly after the moment of creation in our [BBO Crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), the photons are strictly anti-correlated. This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a 100% / 4 states = 25% chance for each correlated state:
+To illustrate, let's reduce our channels to just 4: $l=-2, -1, +1, +2$. Directly after the moment of creation of our entagled photons inside our [BBO Crystal](https://www.newlightphotonics.com/SPDC-Components/BBO-SPDC-Compensators), the photons are strictly anti-correlated. This means if photon A has two twists to the left, photon B must have two twists to the right. With an even distribution, there is a 100% / 4 states = 25% chance for each correlated state:
 
 (where $l_A$ is the twist count for photon A and $l_B$ is the twist count for photon B)
 
