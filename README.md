@@ -1,4 +1,4 @@
-# qtpc - Open-Source High-Dimensional Quantum Optical Computer 
+# qpc - Quantum Photonic Computer 
 
 ![oam](oam__.png)
 
